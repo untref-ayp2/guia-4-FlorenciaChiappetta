@@ -8,7 +8,7 @@ import (
 
 func main() {
 	// Creo un conjunto de letras
-	letras := ejercicios.Letras("Hola Mundo")
+	letras := ejercicios.Letras("Holaaaa Mundo")
 	fmt.Println(letras)
 	// Creo dos conjuntos de números
 	n1 := set.NewSet(1, 10, 5)
