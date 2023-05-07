@@ -8,8 +8,8 @@ import (
 // y devuelva la intersección de todos ellos.
 func Interseccion[T comparable](conjuntos ...*set.Set[T]) *set.Set[T] {
 	arreglo := conjuntos[0]
-	for _, c := range conjuntos {
-		arreglo = set.Intersection(arreglo, c)
+	for _, i := range conjuntos {
+		arreglo = set.Intersection(arreglo, i)
 	}
 
 	return arreglo

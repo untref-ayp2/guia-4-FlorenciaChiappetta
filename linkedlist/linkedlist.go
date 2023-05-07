@@ -180,3 +180,27 @@ func (l *LinkedList[T]) String() string {
 	result += "]"
 	return result
 }
+
+
+type HashTable[T any] struct {
+	clave  T
+	bucket LinkedList[T]
+
+}
+
+func NewHashTable[T comparable]() *HashTable[T] {
+	return &HashTable[T]{clave: nil, bucket: nil}
+}
+
+func (h * HashTable) AddValues(values ...T) {
+	var index int
+	var m int
+	var n int
+	for _,i := range values{
+		index = values()	
+	m = strings.Count(values[i])
+	n = len(values)
+	index = int(math.Mod(m,n))
+	h.elementos.
+	}	
+	return 
