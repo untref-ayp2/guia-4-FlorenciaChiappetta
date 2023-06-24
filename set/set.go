@@ -45,8 +45,8 @@ func (s *Set[T]) Size() int {
 func (s *Set[T]) String() string {
 	cadena := "Conjunto: {"
 	elementos := s.elementos.String()
-	inicio := strings.Index(elementos, "[") + 1
-	fin := strings.Index(elementos, "]")
+	inicio := strings.Index(elementos, "[") + 1 // busca el indice donde esta el corchete
+	fin := strings.Index(elementos, "]")        // busca el indice donde esta el corchete
 	cadena += elementos[inicio:fin]
 	cadena += "}"
 	return cadena
@@ -120,7 +120,7 @@ func Difference[T comparable](s1, s2 *Set[T]) *Set[T] {
 // O(n*m) donde n y m son los tamaños de los conjuntos s1 y s2 respectivamente
 func Subset[T comparable](s1, s2 *Set[T]) bool {
 	for i := 0; i < s2.Size(); i++ {
-		if !s1.Contains(s2.elementos.Get(i)) {
+		if !s1.Contains(s2.elementos.Get(i)) { //valida elemento por elemento si existe en el conjunto1 sino, retorna falso
 			return false
 		}
 	}

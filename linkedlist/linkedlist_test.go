@@ -3,6 +3,8 @@ package linkedlist_test
 import (
 	"guia4/linkedlist"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewLinkedList(t *testing.T) {
@@ -23,6 +25,7 @@ func TestInsertAt(t *testing.T) {
 	for i := 0; i < l.Size(); i++ {
 		if l.Get(i) != i+1 {
 			t.Errorf("Error en el elemento %d, debería ser %d", l.Get(i), i+1)
+			
 		}
 	}
 }
